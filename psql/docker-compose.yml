@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=sevendbs
+      - POSTGRES_PASSWORD=sevendbs
+      - POSTGRES_DB=sevendbs
+    ports:
+      - "5433:5432"
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+volumes:
+  pgdata:
